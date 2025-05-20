@@ -132,7 +132,7 @@
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(10, 155);
+            this.btnRegistrar.Location = new System.Drawing.Point(568, 155);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(113, 46);
             this.btnRegistrar.TabIndex = 7;
@@ -200,7 +200,7 @@
             // 
             this.btnIrEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIrEliminar.BackColor = System.Drawing.Color.White;
-            this.btnIrEliminar.Location = new System.Drawing.Point(8, 207);
+            this.btnIrEliminar.Location = new System.Drawing.Point(566, 207);
             this.btnIrEliminar.Name = "btnIrEliminar";
             this.btnIrEliminar.Size = new System.Drawing.Size(117, 49);
             this.btnIrEliminar.TabIndex = 15;
@@ -230,10 +230,10 @@
             this.tableLayoutPanel1.Controls.Add(this.txtApellido, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNombre, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnRegistrar, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnIrEliminar, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label7, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegistrar, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnIrEliminar, 4, 4);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(38, 137);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
