@@ -64,4 +64,9 @@ public class InstructorRepository
             return false;
         }
     }
+        public void ModificarEntrenador(int id, string nombre, string especialidad, string disponibilidad)
+    {
+
+    }
+
 }

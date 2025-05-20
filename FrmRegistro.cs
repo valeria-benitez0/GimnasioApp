@@ -22,6 +22,8 @@ namespace GimnasioApp
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            string estado = cmbEstadoMembresia.SelectedItem.ToString();
+
             MiembroRepository repo = new MiembroRepository();
 
             bool exito = repo.RegistrarMiembro(
@@ -30,6 +32,7 @@ namespace GimnasioApp
                 txtEmail.Text,
                 txtTelefono.Text,
                 dtpNacimiento.Value,
+                estado,
                 txtContrasena.Text,
                 "Miembro"
             );
@@ -43,6 +46,24 @@ namespace GimnasioApp
         private void btnIrEliminar_Click_1(object sender, EventArgs e)
         {
             FrmEliminarMiembro eliminar = new FrmEliminarMiembro();
+            eliminar.Show();
+        }
+
+        private void FrmRegistro_Load(object sender, EventArgs e)
+        {
+            cmbEstadoMembresia.Items.Add("Activa");
+            cmbEstadoMembresia.Items.Add("Inactiva");
+            cmbEstadoMembresia.SelectedIndex = 0;
+        }
+
+        private void cmbEstadoMembresia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIrModificar_Click(object sender, EventArgs e)
+        {
+            FrmModificarMiembro eliminar = new FrmModificarMiembro();
             eliminar.Show();
         }
     }

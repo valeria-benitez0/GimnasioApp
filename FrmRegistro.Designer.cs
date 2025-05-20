@@ -47,8 +47,11 @@
             this.btnIrEliminar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.cmbEstadoMembresia = new System.Windows.Forms.ComboBox();
+            this.btnIrModificar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,10 +59,10 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 15);
+            this.label1.Location = new System.Drawing.Point(158, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 0;
@@ -67,10 +70,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(147, 67);
+            this.label2.Location = new System.Drawing.Point(158, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 1;
@@ -78,10 +81,10 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(161, 118);
+            this.label3.Location = new System.Drawing.Point(158, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 20);
             this.label3.TabIndex = 2;
@@ -89,10 +92,10 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(146, 168);
+            this.label4.Location = new System.Drawing.Point(158, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 3;
@@ -100,9 +103,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(136, 204);
+            this.label5.Location = new System.Drawing.Point(158, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 40);
             this.label5.TabIndex = 4;
@@ -110,9 +114,10 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(424, 0);
+            this.label6.Location = new System.Drawing.Point(493, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 20);
             this.label6.TabIndex = 5;
@@ -120,9 +125,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(424, 51);
+            this.label7.Location = new System.Drawing.Point(493, 51);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 40);
             this.label7.TabIndex = 6;
@@ -132,9 +138,9 @@
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(568, 155);
+            this.btnRegistrar.Location = new System.Drawing.Point(633, 163);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(113, 46);
+            this.btnRegistrar.Size = new System.Drawing.Size(189, 42);
             this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -143,38 +149,39 @@
             // txtNombre
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.Location = new System.Drawing.Point(240, 15);
+            this.txtNombre.Location = new System.Drawing.Point(279, 13);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(178, 20);
+            this.txtNombre.Size = new System.Drawing.Size(208, 20);
             this.txtNombre.TabIndex = 8;
             // 
             // txtApellido
             // 
             this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApellido.Location = new System.Drawing.Point(240, 67);
+            this.txtApellido.Location = new System.Drawing.Point(279, 61);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(178, 20);
+            this.txtApellido.Size = new System.Drawing.Size(208, 20);
             this.txtApellido.TabIndex = 9;
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(240, 118);
+            this.txtEmail.Location = new System.Drawing.Point(279, 118);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(178, 20);
+            this.txtEmail.Size = new System.Drawing.Size(208, 20);
             this.txtEmail.TabIndex = 10;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.Location = new System.Drawing.Point(240, 168);
+            this.txtTelefono.Location = new System.Drawing.Point(279, 174);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(178, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(208, 20);
             this.txtTelefono.TabIndex = 11;
             // 
             // dtpNacimiento
             // 
-            this.dtpNacimiento.Location = new System.Drawing.Point(240, 207);
+            this.dtpNacimiento.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtpNacimiento.Location = new System.Drawing.Point(279, 223);
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(178, 20);
             this.dtpNacimiento.TabIndex = 12;
@@ -182,27 +189,27 @@
             // txtContrasena
             // 
             this.txtContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContrasena.Location = new System.Drawing.Point(535, 15);
+            this.txtContrasena.Location = new System.Drawing.Point(622, 13);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(180, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(211, 20);
             this.txtContrasena.TabIndex = 13;
             // 
             // txtConfirmar
             // 
             this.txtConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConfirmar.Location = new System.Drawing.Point(535, 67);
+            this.txtConfirmar.Location = new System.Drawing.Point(622, 61);
             this.txtConfirmar.Name = "txtConfirmar";
-            this.txtConfirmar.Size = new System.Drawing.Size(180, 20);
+            this.txtConfirmar.Size = new System.Drawing.Size(211, 20);
             this.txtConfirmar.TabIndex = 14;
             // 
             // btnIrEliminar
             // 
             this.btnIrEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIrEliminar.BackColor = System.Drawing.Color.White;
-            this.btnIrEliminar.Location = new System.Drawing.Point(566, 207);
+            this.btnIrEliminar.Location = new System.Drawing.Point(630, 211);
             this.btnIrEliminar.Name = "btnIrEliminar";
-            this.btnIrEliminar.Size = new System.Drawing.Size(117, 49);
+            this.btnIrEliminar.Size = new System.Drawing.Size(194, 45);
             this.btnIrEliminar.TabIndex = 15;
             this.btnIrEliminar.Text = "Eliminar Miembro";
             this.btnIrEliminar.UseVisualStyleBackColor = false;
@@ -232,37 +239,52 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label7, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnRegistrar, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbEstadoMembresia, 4, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnIrEliminar, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegistrar, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnIrModificar, 0, 1);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(38, 137);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 132);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.41861F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.5814F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(718, 259);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(836, 259);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(149, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(493, 108);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 40);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Estado de membresía:";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(38, 45);
+            this.panel2.Location = new System.Drawing.Point(29, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 89);
+            this.panel2.Size = new System.Drawing.Size(836, 89);
             this.panel2.TabIndex = 17;
             // 
             // label10
@@ -274,20 +296,42 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label10.Location = new System.Drawing.Point(14, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(689, 54);
+            this.label10.Size = new System.Drawing.Size(807, 54);
             this.label10.TabIndex = 4;
             this.label10.Text = "Registrarse";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbEstadoMembresia
+            // 
+            this.cmbEstadoMembresia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbEstadoMembresia.FormattingEnabled = true;
+            this.cmbEstadoMembresia.Location = new System.Drawing.Point(622, 117);
+            this.cmbEstadoMembresia.Name = "cmbEstadoMembresia";
+            this.cmbEstadoMembresia.Size = new System.Drawing.Size(211, 21);
+            this.cmbEstadoMembresia.TabIndex = 18;
+            // 
+            // btnIrModificar
+            // 
+            this.btnIrModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnIrModificar.BackColor = System.Drawing.Color.White;
+            this.btnIrModificar.Location = new System.Drawing.Point(3, 50);
+            this.btnIrModificar.Name = "btnIrModificar";
+            this.btnIrModificar.Size = new System.Drawing.Size(149, 42);
+            this.btnIrModificar.TabIndex = 19;
+            this.btnIrModificar.Text = "Modificar Miembro";
+            this.btnIrModificar.UseVisualStyleBackColor = false;
+            this.btnIrModificar.Click += new System.EventHandler(this.btnIrModificar_Click);
             // 
             // FrmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(926, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Name = "FrmRegistro";
             this.Text = "FrmRegistro";
+            this.Load += new System.EventHandler(this.FrmRegistro_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -318,5 +362,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbEstadoMembresia;
+        private System.Windows.Forms.Button btnIrModificar;
     }
 }
