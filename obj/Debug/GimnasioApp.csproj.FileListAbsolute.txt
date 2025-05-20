@@ -17,3 +17,22 @@ C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioAp
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmEliminarClase.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmMenuInstructor.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmMenuMiembro.resources
+C:\Users\PC\Source\Repos\GimnasioApp\bin\Debug\GimnasioApp.exe.config
+C:\Users\PC\Source\Repos\GimnasioApp\bin\Debug\GimnasioApp.exe
+C:\Users\PC\Source\Repos\GimnasioApp\bin\Debug\GimnasioApp.pdb
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.csproj.AssemblyReference.cache
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmEliminarClase.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmEliminarInstructor.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmEliminarMiembro.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmMenu.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmMenuInstructor.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmMenuMiembro.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmRegistrarClase.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmRegistrarInstructor.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmLogin.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.FrmRegistro.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.Properties.Resources.resources
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.csproj.GenerateResource.cache
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.csproj.CoreCompileInputs.cache
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.exe
+C:\Users\PC\Source\Repos\GimnasioApp\obj\Debug\GimnasioApp.pdb
