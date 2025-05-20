@@ -47,11 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
+    <Compile Include="FrmEliminarInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarInstructor.Designer.cs">
+      <DependentUpon>FrmEliminarInstructor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEliminarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEliminarMiembro.Designer.cs">
       <DependentUpon>FrmEliminarMiembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarInstructor.Designer.cs">
+      <DependentUpon>FrmRegistrarInstructor.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -67,8 +79,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEliminarInstructor.resx">
+      <DependentUpon>FrmEliminarInstructor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEliminarMiembro.resx">
       <DependentUpon>FrmEliminarMiembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarInstructor.resx">
+      <DependentUpon>FrmRegistrarInstructor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

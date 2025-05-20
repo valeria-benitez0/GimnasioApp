@@ -59,6 +59,11 @@ namespace GimnasioApp
             }
         }
 
+        private void btnIrAEliminar_Click(object sender, EventArgs e)
+        {
+            FrmEliminarInstructor eliminar = new FrmEliminarInstructor();
+            eliminar.Show();
+        }
     }
 }
 

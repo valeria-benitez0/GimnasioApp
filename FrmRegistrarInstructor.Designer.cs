@@ -39,6 +39,7 @@
             this.txtEspecialidad = new System.Windows.Forms.TextBox();
             this.dtpHorario = new System.Windows.Forms.DateTimePicker();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.btnIrAEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -132,11 +133,22 @@
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
             this.cmbEstado.TabIndex = 11;
             // 
+            // btnIrAEliminar
+            // 
+            this.btnIrAEliminar.Location = new System.Drawing.Point(133, 326);
+            this.btnIrAEliminar.Name = "btnIrAEliminar";
+            this.btnIrAEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnIrAEliminar.TabIndex = 12;
+            this.btnIrAEliminar.Text = "Eliminar Instructores";
+            this.btnIrAEliminar.UseVisualStyleBackColor = true;
+            this.btnIrAEliminar.Click += new System.EventHandler(this.btnIrAEliminar_Click);
+            // 
             // FrmRegistrarInstructor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnIrAEliminar);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.dtpHorario);
             this.Controls.Add(this.txtEspecialidad);
@@ -168,5 +180,6 @@
         private System.Windows.Forms.TextBox txtEspecialidad;
         private System.Windows.Forms.DateTimePicker dtpHorario;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.Button btnIrAEliminar;
     }
 }
