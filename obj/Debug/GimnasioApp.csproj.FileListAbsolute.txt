@@ -9,3 +9,4 @@ C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioAp
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.exe
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.pdb
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmEliminarMiembro.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmLogin.resources

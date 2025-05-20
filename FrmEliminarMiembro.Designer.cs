@@ -68,7 +68,7 @@
             this.Controls.Add(this.txtIDMiembro);
             this.Controls.Add(this.label1);
             this.Name = "FrmEliminarMiembro";
-            this.Text = "FrmEliminarMiembro";
+            this.Text = "Eliminar Miembro";
             this.Load += new System.EventHandler(this.FrmEliminarMiembro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
