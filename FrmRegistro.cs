@@ -55,5 +55,16 @@ namespace GimnasioApp
                 MessageBox.Show("Error al registrar: " + ex.Message);
             }
         }
+
+        private void FrmRegistro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIrEliminar_Click(object sender, EventArgs e)
+        {
+            FrmEliminarMiembro eliminar = new FrmEliminarMiembro();
+            eliminar.Show();
+        }
     }
 }

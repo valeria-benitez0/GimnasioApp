@@ -43,6 +43,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnIrEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
@@ -167,11 +168,22 @@
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 30;
             // 
+            // btnIrEliminar
+            // 
+            this.btnIrEliminar.Location = new System.Drawing.Point(485, 387);
+            this.btnIrEliminar.Name = "btnIrEliminar";
+            this.btnIrEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnIrEliminar.TabIndex = 45;
+            this.btnIrEliminar.Text = "Eliminar miembro";
+            this.btnIrEliminar.UseVisualStyleBackColor = true;
+            this.btnIrEliminar.Click += new System.EventHandler(this.btnIrEliminar_Click);
+            // 
             // FrmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnIrEliminar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -189,6 +201,7 @@
             this.Controls.Add(this.txtNombre);
             this.Name = "FrmRegistro";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmRegistro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +224,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnIrEliminar;
     }
 }
