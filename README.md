@@ -58,13 +58,16 @@ Según el tipo de usuario autenticado, el sistema redirige a un menú específic
 ## Capturas de pantalla
 
 
-- Formulario de inicio de sesión  
+- Formulario de inicio de sesión
+  
   ![Login](Imagenes/login.png)
 
 - Registro de Instructores
+  
   ![Registro de miembro](Imagenes/Registro.png)
 
 - Eliminar Instructor
+  
   ![Eliminar](Imagenes/Eliminar.png)
 
 ---
