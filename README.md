@@ -72,6 +72,7 @@ Según el tipo de usuario autenticado, el sistema redirige a un menú específic
 - C# (Windows Forms)
 - SQL Server (base de datos `GimnasioDB`)
 - ADO.NET (SqlConnection, SqlCommand, SqlDataReader)
+- Factory
 
 ---
 
