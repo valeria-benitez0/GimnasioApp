@@ -12,3 +12,5 @@ C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioAp
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmLogin.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmEliminarInstructor.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmRegistrarInstructor.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmMenu.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GimnasioApp\GimnasioApp\obj\Debug\GimnasioApp.FrmRegistrarClase.resources
