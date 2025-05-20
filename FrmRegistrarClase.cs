@@ -21,6 +21,8 @@ namespace GimnasioApp
 
         private void btnRegistrarClase_Click(object sender, EventArgs e)
         {
+            ClaseRepository repo = new ClaseRepository();
+
             if (string.IsNullOrWhiteSpace(txtNombreClase.Text) ||
                 string.IsNullOrWhiteSpace(txtDescripcion.Text) ||
                 string.IsNullOrWhiteSpace(txtDuracion.Text) ||
@@ -31,34 +33,18 @@ namespace GimnasioApp
                 return;
             }
 
-            try
-            {
-                SqlConnection con = ConexionBD.ObtenerConexion();
-                if (con.State == ConnectionState.Closed)
-                    con.Open();
+            bool exito = repo.RegistrarClase(
+                txtNombreClase.Text,
+                txtDescripcion.Text,
+                int.Parse(txtDuracion.Text),
+                cmbDificultad.Text,
+                int.Parse(txtCapacidad.Text)
+            );
 
-                string query = "INSERT INTO Clases (nombre_clase, Descripcion, Duracion_min, Dificultad, Capacidad) " +
-                               "VALUES (@Nombre, @Descripcion, @Duracion, @Dificultad, @Capacidad)";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombreClase.Text);
-                    cmd.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text);
-                    cmd.Parameters.AddWithValue("@Duracion", int.Parse(txtDuracion.Text));
-                    cmd.Parameters.AddWithValue("@Dificultad", cmbDificultad.Text);
-                    cmd.Parameters.AddWithValue("@Capacidad", int.Parse(txtCapacidad.Text));
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Clase registrada correctamente.");
-                }
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al registrar clase: " + ex.Message);
-            }
+            if (exito)
+                MessageBox.Show("Clase registrada correctamente.");
+            else
+                MessageBox.Show("Error al registrar clase.");
         }
-
     }
 }

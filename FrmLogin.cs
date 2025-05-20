@@ -21,44 +21,55 @@ namespace GimnasioApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text;
-            string contrasena = txtContrasena.Text;
+            string email = txtEmail.Text.Trim();
+            string contrasena = txtContrasena.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(contrasena))
-            {
-                MessageBox.Show("Por favor ingresa tu email y contraseña.");
-                return;
-            }
-
-            try
-            {
-                SqlConnection con = ConexionBD.ObtenerConexion();
+            SqlConnection con = ConexionBD.ObtenerConexion();
+            if (con.State == ConnectionState.Closed)
                 con.Open();
 
-                string query = "SELECT * FROM Miembros WHERE Email = @Email AND Contrasena = @Contrasena";
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+            // 1. Buscar en Miembros
+            string queryMiembro = "SELECT * FROM Miembros WHERE Email = @Email AND Contrasena = @Contrasena";
+            SqlCommand cmd1 = new SqlCommand(queryMiembro, con);
+            cmd1.Parameters.AddWithValue("@Email", email);
+            cmd1.Parameters.AddWithValue("@Contrasena", contrasena);
 
-                    SqlDataReader reader = cmd.ExecuteReader();
+            SqlDataReader reader1 = cmd1.ExecuteReader();
 
-                    if (reader.Read())
-                    {
-                        MessageBox.Show("Inicio de sesión exitoso. Bienvenido/a " + reader["Nombre"].ToString() + "!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Email o contraseña incorrectos.");
-                    }
-                }
-
-                con.Close();
-            }
-            catch (Exception ex)
+            if (reader1.Read())
             {
-                MessageBox.Show("Error al iniciar sesión: " + ex.Message);
+                MessageBox.Show("Bienvenido Miembro: " + reader1["Nombre"]);
+                string nombre = reader1["Nombre"].ToString();
+                FrmMenuMiembro menuMiembro = new FrmMenuMiembro(nombre); 
+                menuMiembro.Show();
+                this.Hide();
+                con.Close();
+                return;
             }
+            reader1.Close();
+
+            // 2. Buscar en Instructores
+            string queryInstructor = "SELECT * FROM Instructores WHERE Email = @Email AND Contrasena = @Contrasena";
+            SqlCommand cmd2 = new SqlCommand(queryInstructor, con);
+            cmd2.Parameters.AddWithValue("@Email", email);
+            cmd2.Parameters.AddWithValue("@Contrasena", contrasena);
+
+            SqlDataReader reader2 = cmd2.ExecuteReader();
+
+            if (reader2.Read())
+            {
+                MessageBox.Show("Bienvenido Instructor: " + reader2["Nombre"]);
+                FrmMenuInstructor menuInstructor = new FrmMenuInstructor(); // Este sí puede tener el botón de Registrar Clase
+                menuInstructor.Show();
+                this.Hide();
+                con.Close();
+                return;
+            }
+            reader2.Close();
+
+            // Si no lo encontró en ninguna tabla:
+            MessageBox.Show("Email o contraseña incorrectos.");
+            con.Close();
         }
 
         private void btnRegistrarse_Click_1(object sender, EventArgs e)

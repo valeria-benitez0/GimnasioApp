@@ -40,6 +40,10 @@
             this.dtpHorario = new System.Windows.Forms.DateTimePicker();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.btnIrAEliminar = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(130, 150);
+            this.label3.Location = new System.Drawing.Point(130, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 2;
@@ -72,7 +76,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(130, 185);
+            this.label4.Location = new System.Drawing.Point(130, 279);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 3;
@@ -81,7 +85,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(130, 228);
+            this.label5.Location = new System.Drawing.Point(130, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 4;
@@ -89,7 +93,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(133, 263);
+            this.btnRegistrar.Location = new System.Drawing.Point(325, 397);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrar.TabIndex = 5;
@@ -113,14 +117,14 @@
             // 
             // txtEspecialidad
             // 
-            this.txtEspecialidad.Location = new System.Drawing.Point(300, 147);
+            this.txtEspecialidad.Location = new System.Drawing.Point(300, 241);
             this.txtEspecialidad.Name = "txtEspecialidad";
             this.txtEspecialidad.Size = new System.Drawing.Size(100, 20);
             this.txtEspecialidad.TabIndex = 8;
             // 
             // dtpHorario
             // 
-            this.dtpHorario.Location = new System.Drawing.Point(300, 185);
+            this.dtpHorario.Location = new System.Drawing.Point(300, 279);
             this.dtpHorario.Name = "dtpHorario";
             this.dtpHorario.Size = new System.Drawing.Size(200, 20);
             this.dtpHorario.TabIndex = 10;
@@ -131,14 +135,14 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbEstado.Location = new System.Drawing.Point(300, 228);
+            this.cmbEstado.Location = new System.Drawing.Point(300, 322);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
             this.cmbEstado.TabIndex = 11;
             // 
             // btnIrAEliminar
             // 
-            this.btnIrAEliminar.Location = new System.Drawing.Point(133, 326);
+            this.btnIrAEliminar.Location = new System.Drawing.Point(144, 365);
             this.btnIrAEliminar.Name = "btnIrAEliminar";
             this.btnIrAEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnIrAEliminar.TabIndex = 12;
@@ -146,11 +150,47 @@
             this.btnIrAEliminar.UseVisualStyleBackColor = true;
             this.btnIrAEliminar.Click += new System.EventHandler(this.btnIrAEliminar_Click);
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(300, 154);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 13;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(300, 192);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(100, 20);
+            this.txtContrasena.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(133, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Email";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(133, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Contraseña";
+            // 
             // FrmRegistrarInstructor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnIrAEliminar);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.dtpHorario);
@@ -184,5 +224,9 @@
         private System.Windows.Forms.DateTimePicker dtpHorario;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Button btnIrAEliminar;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

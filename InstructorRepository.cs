@@ -8,7 +8,7 @@ using System.Data;
 
 public class InstructorRepository
 {
-    public bool RegistrarInstructor(string nombre, string apellido, string especialidad, DateTime horario, string estado)
+    public bool RegistrarInstructor(string nombre, string apellido, string especialidad, DateTime horario, string estado, string email, string contrasena)
     {
         try
         {
@@ -16,8 +16,8 @@ public class InstructorRepository
             if (con.State == ConnectionState.Closed)
                 con.Open();
 
-            string query = "INSERT INTO Instructores (Nombre, Apellido, Especialidad, Horario, Estado) " +
-                           "VALUES (@Nombre, @Apellido, @Especialidad, @Horario, @Estado)";
+            string query = "INSERT INTO Instructores (Nombre, Apellido, Especialidad, Horario, Estado, Email, Contrasena) " +
+                           "VALUES (@Nombre, @Apellido, @Especialidad, @Horario, @Estado, @Email, @Contrasena)";
 
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
@@ -26,6 +26,8 @@ public class InstructorRepository
                 cmd.Parameters.AddWithValue("@Especialidad", especialidad);
                 cmd.Parameters.AddWithValue("@Horario", horario);
                 cmd.Parameters.AddWithValue("@Estado", estado);
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Contrasena", contrasena);
 
                 cmd.ExecuteNonQuery();
             }

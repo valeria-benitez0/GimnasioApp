@@ -21,14 +21,27 @@ namespace GimnasioApp
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            var repo = new InstructorRepository();
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+         string.IsNullOrWhiteSpace(txtApellido.Text) ||
+         string.IsNullOrWhiteSpace(txtEspecialidad.Text) ||
+         string.IsNullOrWhiteSpace(txtEmail.Text) ||
+         string.IsNullOrWhiteSpace(txtContrasena.Text) ||
+         cmbEstado.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor completa todos los campos.");
+                return;
+            }
+
+            InstructorRepository repo = new InstructorRepository();
 
             bool exito = repo.RegistrarInstructor(
                 txtNombre.Text,
                 txtApellido.Text,
                 txtEspecialidad.Text,
                 dtpHorario.Value,
-                cmbEstado.Text
+                cmbEstado.Text,
+                txtEmail.Text,
+                txtContrasena.Text
             );
 
             if (exito)

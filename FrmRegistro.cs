@@ -30,7 +30,8 @@ namespace GimnasioApp
                 txtEmail.Text,
                 txtTelefono.Text,
                 dtpNacimiento.Value,
-                txtContrasena.Text
+                txtContrasena.Text,
+                "Miembro"
             );
 
             if (exito)

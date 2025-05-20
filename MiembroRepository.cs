@@ -8,7 +8,7 @@ using System.Data;
 
 public class MiembroRepository
 {
-    public bool RegistrarMiembro(string nombre, string apellido, string email, string telefono, DateTime fechaNacimiento, string contrasena)
+    public bool RegistrarMiembro(string nombre, string apellido, string email, string telefono, DateTime fechaNacimiento, string contrasena, string rol)
     {
         try
         {
