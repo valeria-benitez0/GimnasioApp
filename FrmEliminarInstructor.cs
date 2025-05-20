@@ -20,36 +20,13 @@ namespace GimnasioApp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtIDInstructor.Text))
-            {
-                MessageBox.Show("Por favor ingresa el ID del instructor que deseas eliminar.");
-                return;
-            }
+            var repo = new InstructorRepository();
+            int id = int.Parse(txtIDInstructor.Text);
 
-            try
-            {
-                SqlConnection con = ConexionBD.ObtenerConexion();
-                if (con.State == ConnectionState.Closed)
-                    con.Open();
-
-                string query = "DELETE FROM Instructores WHERE IDInstructor = @ID";
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@ID", int.Parse(txtIDInstructor.Text));
-                    int filasAfectadas = cmd.ExecuteNonQuery();
-
-                    if (filasAfectadas > 0)
-                        MessageBox.Show("Instructor eliminado correctamente.");
-                    else
-                        MessageBox.Show("No se encontró un instructor con ese ID.");
-                }
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al eliminar instructor: " + ex.Message);
-            }
+            if (repo.EliminarInstructor(id))
+                MessageBox.Show("Instructor eliminado correctamente.");
+            else
+                MessageBox.Show("No se pudo eliminar el instructor.");
         }
 
     }

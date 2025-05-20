@@ -21,38 +21,20 @@ namespace GimnasioApp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtIDMiembro.Text))
+            MiembroRepository repo = new MiembroRepository();
+
+            if (int.TryParse(txtIDMiembro.Text, out int id))
             {
-                MessageBox.Show("Por favor ingresa el ID del miembro que deseas eliminar.");
-                return;
+                bool exito = repo.EliminarMiembro(id);
+
+                if (exito)
+                    MessageBox.Show("Miembro eliminado correctamente.");
+                else
+                    MessageBox.Show("No se encontró un miembro con ese ID.");
             }
-
-            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas eliminar este miembro?", "Confirmar", MessageBoxButtons.YesNo);
-            if (resultado != DialogResult.Yes)
-                return;
-
-            try
+            else
             {
-                SqlConnection con = ConexionBD.ObtenerConexion();
-                con.Open();
-
-                string query = "DELETE FROM Miembros WHERE IDMiembro = @ID";
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@ID", int.Parse(txtIDMiembro.Text));
-                    int filasAfectadas = cmd.ExecuteNonQuery();
-
-                    if (filasAfectadas > 0)
-                        MessageBox.Show("Miembro eliminado correctamente.");
-                    else
-                        MessageBox.Show("No se encontró un miembro con ese ID.");
-                }
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al eliminar miembro: " + ex.Message);
+                MessageBox.Show("Por favor ingresa un ID válido.");
             }
         }
 

@@ -21,42 +21,20 @@ namespace GimnasioApp
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                string.IsNullOrWhiteSpace(txtApellido.Text) ||
-                string.IsNullOrWhiteSpace(txtEspecialidad.Text) ||
-                cmbEstado.SelectedIndex == -1)
-            {
-                MessageBox.Show("Por favor completa todos los campos.");
-                return;
-            }
+            var repo = new InstructorRepository();
 
-            try
-            {
-                SqlConnection con = ConexionBD.ObtenerConexion();
-                if (con.State == ConnectionState.Closed)
-                    con.Open();
+            bool exito = repo.RegistrarInstructor(
+                txtNombre.Text,
+                txtApellido.Text,
+                txtEspecialidad.Text,
+                dtpHorario.Value,
+                cmbEstado.Text
+            );
 
-                string query = "INSERT INTO Instructores (Nombre, Apellido, Especialidad, Horario, Estado) " +
-                               "VALUES (@Nombre, @Apellido, @Especialidad, @Horario, @Estado)";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@Apellido", txtApellido.Text);
-                    cmd.Parameters.AddWithValue("@Especialidad", txtEspecialidad.Text);
-                    cmd.Parameters.AddWithValue("@Horario", dtpHorario.Value);
-                    cmd.Parameters.AddWithValue("@Estado", cmbEstado.Text);
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Instructor registrado correctamente.");
-                }
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al registrar: " + ex.Message);
-            }
+            if (exito)
+                MessageBox.Show("Instructor registrado correctamente.");
+            else
+                MessageBox.Show("Error al registrar instructor.");
         }
 
         private void btnIrAEliminar_Click(object sender, EventArgs e)
