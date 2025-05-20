@@ -29,5 +29,11 @@ namespace GimnasioApp
             login.Show();
             this.Close(); // Cierra este menú
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmEliminarClase frm = new FrmEliminarClase();
+            frm.Show();
+        }
     }
 }

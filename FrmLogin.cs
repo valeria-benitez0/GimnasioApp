@@ -82,5 +82,15 @@ namespace GimnasioApp
                 this.Show();// Cuando el registro se cierra, vuelve a mostrar login
             }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

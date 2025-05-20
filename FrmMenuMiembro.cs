@@ -15,7 +15,7 @@ namespace GimnasioApp
         public FrmMenuMiembro(string nombre)
         {
             InitializeComponent();
-            lblBienvenida.Text = "¡Bienvenido, " + nombre + "!";
+            lblBienvenida.Text = "¡Bienvenido/a, " + nombre + "!";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,6 +23,16 @@ namespace GimnasioApp
             FrmLogin login = new FrmLogin();
             login.Show();
             this.Close();
+        }
+
+        private void lblBienvenida_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
