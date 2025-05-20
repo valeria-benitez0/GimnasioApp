@@ -61,7 +61,7 @@ namespace GimnasioApp
             }
         }
 
-        private void btnRegistrarse_Click(object sender, EventArgs e)
+        private void btnRegistrarse_Click_1(object sender, EventArgs e)
         {
             // Abre el formulario de registro
             using (FrmRegistro reg = new FrmRegistro())

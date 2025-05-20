@@ -28,33 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.txtIDMiembro = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID del miembro a eliminar";
-            // 
             // txtIDMiembro
             // 
-            this.txtIDMiembro.Location = new System.Drawing.Point(112, 115);
+            this.txtIDMiembro.Location = new System.Drawing.Point(177, 163);
             this.txtIDMiembro.Name = "txtIDMiembro";
             this.txtIDMiembro.Size = new System.Drawing.Size(100, 20);
-            this.txtIDMiembro.TabIndex = 2;
+            this.txtIDMiembro.TabIndex = 0;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(112, 180);
+            this.btnEliminar.Location = new System.Drawing.Point(177, 214);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -66,10 +56,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtIDMiembro);
-            this.Controls.Add(this.label1);
             this.Name = "FrmEliminarMiembro";
-            this.Text = "Eliminar Miembro";
-            this.Load += new System.EventHandler(this.FrmEliminarMiembro_Load);
+            this.Text = "FrmEliminarMiembro";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,7 +65,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDMiembro;
         private System.Windows.Forms.Button btnEliminar;
     }

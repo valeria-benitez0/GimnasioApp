@@ -56,9 +56,5 @@ namespace GimnasioApp
             }
         }
 
-        private void FrmEliminarMiembro_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

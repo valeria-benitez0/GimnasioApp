@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -56,12 +58,7 @@ namespace GimnasioApp
             }
         }
 
-        private void FrmRegistro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnIrEliminar_Click(object sender, EventArgs e)
+        private void btnIrEliminar_Click_1(object sender, EventArgs e)
         {
             FrmEliminarMiembro eliminar = new FrmEliminarMiembro();
             eliminar.Show();
